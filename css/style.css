@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f7f9;
+}
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+aside {
+  width: 220px;
+  background: #c0392b;
+  color: #fff;
+  padding: 20px;
+}
+aside h2 {
+  margin: 0 0 1em;
+  font-size: 1.2rem;
+}
+ul.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em;
+}
+ul.menu-list li {
+  margin-bottom: 8px;
+}
+a.menu-item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 0;
+  font-weight: normal;
+}
+a.menu-item.active {
+  font-weight: bold;
+}
+a.menu-item .icon {
+  margin-right: 8px;
+}
+details {
+  margin-bottom: 1em;
+}
+details summary {
+  padding: 8px 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  color: #fff;
+  font-size: 1.2em;
+}
+.city-list {
+  list-style: none;
+  padding-left: 1em;
+  margin: 0.5em 0 0;
+}
+.city-list li {
+  padding: 4px 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+.city-list li.active a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.city-list li.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+main {
+  flex: 1;
+  padding: 20px;
+}
+h1 {
+  margin-top: 0;
+  color: #34495e;
+}
+.intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.banner {
+  background: rgba(39, 174, 96, 0.3);
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.banner h2 {
+  margin: 0 0 8px;
+  color: #27ae60;
+}
+.banner p {
+  margin: 0;
+}
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 8px 12px;
+  text-align: center;
+}
+th {
+  background: #2980b9;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+tbody tr:nth-child(odd) {
+  background: #ecf0f1;
+}
+tbody tr:hover {
+  background: #d0e9f5;
+}

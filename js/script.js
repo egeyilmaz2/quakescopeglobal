@@ -1,0 +1,64 @@
+const DATA=[
+  {mw:3.0,E:2e9,TNT:0.5,mmi:'III',c:0},
+  {mw:3.1,E:2.82e9,TNT:0.7,mmi:'III',c:0},
+  {mw:3.2,E:4e9,TNT:1,mmi:'III',c:0},
+  {mw:3.3,E:5.62e9,TNT:1.3,mmi:'III',c:0},
+  {mw:3.4,E:8e9,TNT:2,mmi:'III–IV',c:0},
+  {mw:3.5,E:1.12e10,TNT:2.6,mmi:'IV',c:0},
+  {mw:3.6,E:1.58e10,TNT:3.8,mmi:'IV',c:0},
+  {mw:3.7,E:2.24e10,TNT:5.3,mmi:'IV–V',c:0},
+  {mw:3.8,E:3.16e10,TNT:7.6,mmi:'V',c:0},
+  {mw:3.9,E:4.47e10,TNT:10.8,mmi:'V',c:0},
+  {mw:4.0,E:6.31e10,TNT:15,mmi:'V–VI',c:0},
+  {mw:4.1,E:8.91e10,TNT:21.3,mmi:'VI',c:0},
+  {mw:4.2,E:1.26e11,TNT:30,mmi:'VI',c:0},
+  {mw:4.3,E:1.78e11,TNT:41,mmi:'VI–VII',c:0},
+  {mw:4.4,E:2.51e11,TNT:59,mmi:'VII',c:233},
+  {mw:4.5,E:3.55e11,TNT:83,mmi:'VII',c:281},
+  {mw:4.6,E:5.01e11,TNT:119,mmi:'VII–VIII',c:337},
+  {mw:4.7,E:7.08e11,TNT:169,mmi:'VIII',c:393},
+  {mw:4.8,E:1e12,TNT:238,mmi:'VIII',c:449},
+  {mw:4.9,E:1.41e12,TNT:336,mmi:'VIII–IX',c:505},
+  {mw:5.0,E:2e12,TNT:475,mmi:'IX',c:1053},
+  {mw:5.1,E:2.82e12,TNT:670,mmi:'IX',c:1158},
+  {mw:5.2,E:4e12,TNT:950,mmi:'IX–X',c:1263},
+  {mw:5.3,E:5.62e12,TNT:1339,mmi:'X',c:1369},
+  {mw:5.4,E:7.94e12,TNT:1891,mmi:'X',c:1474},
+  {mw:5.5,E:1.12e13,TNT:2671,mmi:'X–XI',c:1579},
+  {mw:5.6,E:1.58e13,TNT:3774,mmi:'XI',c:17469},
+  {mw:5.7,E:2.24e13,TNT:5330,mmi:'XI',c:18561},
+  {mw:5.8,E:3.16e13,TNT:7529,mmi:'XI–XII',c:19653},
+  {mw:5.9,E:4.47e13,TNT:10635,mmi:'XII',c:20745},
+  {mw:6.0,E:6.31e13,TNT:15023,mmi:'XII',c:21836},
+  {mw:6.1,E:8.91e13,TNT:21220,mmi:'XII',c:22928},
+  {mw:6.2,E:1.26e14,TNT:29974,mmi:'XII',c:24020},
+  {mw:6.3,E:1.78e14,TNT:42340,mmi:'XII',c:25112},
+  {mw:6.4,E:2.51e14,TNT:59807,mmi:'XII',c:26204},
+  {mw:6.5,E:3.55e14,TNT:84479,mmi:'XII',c:27296},
+  {mw:6.6,E:5.01e14,TNT:119330,mmi:'XII',c:28387},
+  {mw:6.7,E:7.08e14,TNT:168559,mmi:'XII',c:29479},
+  {mw:6.8,E:1e15,TNT:238095,mmi:'XII',c:30571},
+  {mw:6.9,E:1.41e15,TNT:336318,mmi:'XII',c:31663},
+  {mw:7.0,E:1.99e15,TNT:475062,mmi:'XII',c:32755},
+  {mw:7.1,E:2.82e15,TNT:671044,mmi:'XII',c:33846},
+  {mw:7.2,E:4e15,TNT:947874,mmi:'XII',c:34938},
+  {mw:7.3,E:5.62e15,TNT:1338908,mmi:'XII',c:36030},
+  {mw:7.4,E:7.94e15,TNT:1891258,mmi:'XII',c:37122},
+  {mw:7.5,E:1.12e16,TNT:2671473,mmi:'XII',c:38214},
+  {mw:7.6,E:1.58e16,TNT:3773555,mmi:'XII',c:39306},
+  {mw:7.7,E:2.24e16,TNT:5330288,mmi:'XII',c:40400},
+  {mw:7.8,E:3.16e16,TNT:7529233,mmi:'XII',c:41500},
+  {mw:7.9,E:4.47e16,TNT:10635324,mmi:'XII',c:42600},
+  {mw:8.0,E:6.31e16,TNT:15022794,mmi:'XII',c:43700}
+];
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const table=document.getElementById('data-table');
+  if(!table)return;
+  const tbody=table.querySelector('tbody');
+  DATA.forEach(r=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${r.mw.toFixed(1)}</td><td>${r.E.toExponential(2)}</td><td>${r.TNT.toLocaleString()}</td><td>${r.mmi}</td><td>${r.c.toLocaleString()}</td>`;
+    tbody.appendChild(tr);
+  });
+});

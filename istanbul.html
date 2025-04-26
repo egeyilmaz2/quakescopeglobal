@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuakeScopeGlobal – İstanbul</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-istanbul">
+  <div class="layout">
+    <aside>
+      <h2>Menü</h2>
+      <ul class="menu-list">
+        <li><a href="index.html" class="menu-item"><span class="icon">🏠</span> Ana Sayfa</a></li>
+      </ul>
+      <details open>
+        <summary>Türkiye</summary>
+        <ul class="city-list">
+          <li class="active"><a href="istanbul.html">📍 İstanbul</a></li>
+          <li class="disabled">Ankara</li>
+          <li class="disabled">İzmir</li>
+        </ul>
+      </details>
+      <!-- Other countries collapsed -->
+      <details><summary>Japonya</summary><ul class="city-list"><li class="disabled">Tokyo</li><li class="disabled">Osaka</li></ul></details>
+      <details><summary>ABD</summary><ul class="city-list"><li class="disabled">Los Angeles</li><li class="disabled">New York</li></ul></details>
+      <details><summary>Meksika</summary><ul class="city-list"><li class="disabled">Meksiko</li><li class="disabled">Guadalajara</li></ul></details>
+    </aside>
+
+    <main>
+      <h1>İstanbul Deprem Verisi</h1>
+      <div class="table-container">
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th> Mw </th><th> Enerji (J) </th><th> TNT (ton) </th><th> MMI </th><th> Tahmini Can Kaybı </th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
